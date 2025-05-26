@@ -1,0 +1,12 @@
+services:
+  arm-builder:
+    platform: linux/arm/v7
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: arm-nuitka
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
